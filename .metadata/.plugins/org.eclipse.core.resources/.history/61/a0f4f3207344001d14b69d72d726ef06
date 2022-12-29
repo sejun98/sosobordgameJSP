@@ -1,0 +1,12 @@
+@charset "EUC-KR";
+@import url("http://fonts.googleapis.com/earlyacces/nanumgothic.css");
+@import url("http://fonts.googleapis.com/earlyacces/hanna.css");
+@import url("http://fonts.googleapis.com/earlyacces/notosanskr.css");
+* {
+	font-family: 'Nanum Gothic';	
+}
+thead tr th {
+	background-color: #006DCC;
+	color : white;
+	text-align : center;
+}

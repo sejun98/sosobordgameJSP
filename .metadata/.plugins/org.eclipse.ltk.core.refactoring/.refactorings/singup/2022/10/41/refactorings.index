@@ -1,0 +1,21 @@
+1664951871692	Move 'mysql-connector-java-8.0.30.jar' to 'lib'
+1664951886449	Copy file
+1665045624195	Rename resource 'index.html'
+1665045627585	Move 'index.jsp' to 'webapp'
+1665045728104	Move 'index.jsp' to 'main'
+1665045788350	Delete element
+1665046076664	Rename resource 'index.html'
+1665046102475	Rename resource 'index.jsp'
+1665109964547	Delete element
+1665109969125	Delete element
+1665110139775	Delete element
+1665110237038	Move 8 resources to 'WEB-INF'
+1665110267511	Move 8 resources to 'webapp'
+1665110676961	Delete element
+1665124089681	Delete element
+1665124090999	Delete element
+1665128294055	Delete element
+1665128296703	Rename resource 'login2.css'
+1665128311663	Rename resource 'login.css'
+1665128382040	Rename resource 'login2.css'
+1665128407975	Rename resource 'login.css'

@@ -1,0 +1,38 @@
+*{
+ margin:0;
+ padding:0;
+ border:none; 
+ 	list-style:none;
+	text-decoration: none;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-family: noto,notojp,notokr,Helvetica
+	,Microsoft YaHei,Apple SD Gothic Neo,Malgun Gothic,
+	"\B9D1\C740 \ACE0\B515",Dotum,\\B3CB\C6C0,sans-serif;
+}
+
+/*여백초기화*/
+body, div, dl, dd, dt, ul, li, ol, h1, h2, h3, h4, h5, h6, form, legend, textarea, select, fieldset, p, button {margin: 0; padding: 0;}
+
+/*링크 초기화 */
+a { color: #273743; text-decoration: none; }
+a:hover { color: #000000; }
+
+/*폰트초기화 */
+body, input, textarea, select, button, table {line-height: 1.7} /*나눔고딕은 크로스브라우져에 가장 적합 */
+
+/*h태그 초기화 */  
+h1, h2, h3, h4, h5, h6 { font-size: 12px; font-weight: normal; }
+
+/*목록태그 초기화*/
+li, ol, ul {list-style: none;}
+
+/*ir*/
+
+.ir { width: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden; position: absolute; left: 0; top: 0; }
+.cursor {
+	cursor:pointer;
+}
+.down_title:hover {
+	background-color: #646464;
+	color: #F0F0F0
+}

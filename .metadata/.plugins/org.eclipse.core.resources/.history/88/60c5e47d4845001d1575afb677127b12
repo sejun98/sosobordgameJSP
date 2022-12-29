@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.text.*" %>  
+<%@ page import="java.util.*, java.lang.*"  %>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 입력 화면</title>
+</head>
+
+<script>
+	function checkLogin() {
+		
+		var regExpId = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+		var regExpName = /^[가-힣]*$/;
+		var regExpPasswd = /^[0-9]*$/;
+		var regExpPhone = /^\d{3}-\d{3,4}-\d{4}$/;
+		var regExpEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+		
+		var form = document.loginForm;
+		
+		
+		
+		if(form.id.value=="") {
+			alert("아이디를 입력해주세요");
+			form.id.focus();
+			return false;
+		} else if (form.id.value.length < 4 || form.id.value.length > 12) {
+			alert("아이디는 4 ~ 12자 이내로 입력 가능합니다!");
+			form.id.focus();
+			return false;
+		} else if(!regExpId.test(form.id.value)){
+			alert("아이디는 문자로 시작해주세요!");
+			form.id.focus();
+			return false;
+		} else if (form.pw.value==""){
+			alert("비밀번호를 입력해주세요.");
+			form.pw.focus();
+			return false;
+			
+		} else if (form.pw.value.length < 8 || form.pw.value.length > 14){
+			alert("비밀번호는 8 ~ 14자 이내로 입력 가능합니다.");
+			form.pw.focus();
+			return false;	
+		} else if(!regExpPasswd.test(form.pw.value)){
+			alert("비밀번호는 숫자만입력해주세요!");
+			form.pw.focus();
+			return false;
+		} else if(!regExpId.test(form.id.value)){
+			alert("아이디는 문자로 시작해주세요!");
+			form.id.focus();
+			return false;
+		}
+		
+		else if(!regExpName.test(form.name.value)){
+			alert("이름은 한글만 입력해주세요");
+			form.name.focus();
+			return false;
+		}
+		else if (!regExpEmail.test(form.email.value)){
+			alert("이메일 입력을 확인해주세요");
+			form.email.focus();
+			return false;
+		}
+		form.submit();
+	}
+</script>
+
+
+<body>
+
+	<h2>회원가입</h2>
+	
+	<form action="join_ok.jsp" method="post" name="loginForm">
+		아이디:<input type="text" name="id"><br/>
+		비밀번호:<input type="password" name="pw"><br/>
+		이름:<input type="text" name="name"><br/>
+		이메일:<input type="text" name="email"><br/>
+		전화번호:
+		<select name="phone1">
+			<option>010</option>
+			<option>02</option>
+			<option>031</option>
+			<option>051</option>
+		</select>
+		<input type="text" name="phone2" size="5">
+		<input type="text" name="phone3" size="5">
+		
+		<br/>
+		<input type="radio" name="gender" value="m" checked>남자
+		<input type="radio" name="gender" value="f">여자
+		
+		<input type="button" value="가입" onclick="checkLogin()">
+	</form>
+</body>
+</html>

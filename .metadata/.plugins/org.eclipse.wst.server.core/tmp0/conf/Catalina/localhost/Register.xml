@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="C:\Users\tj\eclipse-workspace\Register\src\main\webapp" path="/Register" reloadable="true" source="org.eclipse.jst.jee.server:Register"><Resources><PreResources base="C:\Users\tj\eclipse-workspace\Register\build\classes" classLoaderOnly="false" className="org.apache.catalina.webresources.DirResourceSet" internalPath="/" webAppMount="/WEB-INF/classes"/></Resources></Context>

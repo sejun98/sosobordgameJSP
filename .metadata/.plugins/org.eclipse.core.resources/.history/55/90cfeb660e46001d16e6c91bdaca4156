@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.text.*" %>  
+<%@ page import="java.util.*, java.lang.*"  %>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+<link rel="shortcut icon" href="images/pabicon.ico">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reset.css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+
+
+</head>
+<body>
+<h1>로그인을 해보자!</h1>
+<%
+	String name = (String)session.getAttribute("name");
+	if(name == null) {
+%>
+<center>
+		<div class="login-wrapper">
+			<h2>Login</h2>
+			<form method="post" action="서버의url" id="login-form">
+				<input type="text" name="userName" placeholder="ID">
+				<input type="password" name="userPassword" placeholder="Password">
+				<label for="remember-check">
+					<input type="checkbox" id="remember-check">  아이디 저장하기
+					| 회원가입
+				</label>
+				<input type="submit" value="로그인">
+			</form>
+		</div>
+</center>
+	<form action="<%= request.getContextPath() %>/login_pro.jsp" method="post">
+		아 이 디: <input type="text" name="id">	
+		비밀번호 : <input type="password" name="pw">	
+		<input type="submit" value="로그인버튼">
+	</form>
+<%
+	} else {
+			%>
+		<%= name %>님 로그인 중
+		<a href="<% request.getContextPath(); %> logout.jsp">로그아웃</a>
+		<%	
+	}
+%>
+</body>
+</html>
